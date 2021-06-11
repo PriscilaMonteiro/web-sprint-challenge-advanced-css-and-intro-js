@@ -23,9 +23,21 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Accessibility in Web designer is to think about EVERYONE accessing the data regardless of how they interact with the page, if it is using a phone or a desktop for example, if their internet is fast or slow or if they have any disabilities (auditoy, cognitive, neurological, physical or visual needs).
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+First, you should use scalable units (REM,EM,%); second, you need to think about screen readers so you can keep in mind that your tags need to be semantic (div and span are not semantic for example), also you should use meaningful id and class names and give your images "alt" descriptive texts; and last, you need to be mindful about colors, we have users that use grey scale and also we have a population of colorblind people that need quality access to data.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+Variable is a way to store, change and use data in code. 
+Let's think about a Parking Lot as the memory, and the vehicles would be my data (I can have cars, trucks, moto, etc), the vehicle's spaces would be my variables (the place that I store my vehicles). 
+I could park a car in my space, or a truck or even could let the space empty. That's the way I like to think about variables, a way to store , change and use data!
+
 4. What is the purpose of using functions in code?
+The purpose is to allow developers to repeat sections of code with just a single line.
+ 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
