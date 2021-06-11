@@ -254,14 +254,15 @@ function splitYears(years){
 function get20s(artists){
   let newArray =[];
   for(let i = 0; i<artists.length; i++){
-    // if(artists[i])
-  splitYears(artists[i].years === 1907)
+      let yearsArray = splitYears(artists[i].years);
+      if(yearsArray[0]>=1900 && yearsArray[1]<=2000){
+          newArray.push(artists[i].name);
+      }
   }
-
-
+  return newArray;
 }
 
-
+console.log('task4:', get20s(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -277,6 +278,7 @@ function get20s(artists){
   return artists.length;
 }
    
+console.log('task 5:', removeArtist(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -307,6 +309,7 @@ function addArtist(artists){
   return artists;
 }   
 
+console.log('task 6:', addArtist(artists));
 
   
 
@@ -327,7 +330,7 @@ function lotsOfArt(artists){
   return productiveArtists;
 }
 
-console.log(lotsOfArt(artists));
+console.log('task 7:', lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
