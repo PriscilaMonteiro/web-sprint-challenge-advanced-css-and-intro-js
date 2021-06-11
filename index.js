@@ -235,7 +235,7 @@ function getArtistByIndex(array, index) {
 }  
 console.log('task3:', getArtistByIndex(artists,0));
 
-//***************/ I really don't know what is wrong here *************************
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -255,7 +255,7 @@ function get20s(artists){
   let newArray =[];
   for(let i = 0; i<artists.length; i++){
     // if(artists[i])
-  splitYears(artists[i].years)
+  splitYears(artists[i].years === 1907)
   }
 
 
@@ -272,8 +272,9 @@ function get20s(artists){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+ function removeArtist(artists,index) {
+  artists.splice(index,1);
+  return artists.length;
 }
    
 
@@ -293,9 +294,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+function addArtist(artists){
+  let newArtist = {
+      id: 20,
+      name: 'Priscila Monteiro', 
+      years: '1979 - 2021',
+      genre: 'Web Design', 
+      nationality: 'Brazilian',
+      bio: 'ahdiashjiofjaopjfoaj dhfiosjhfoihaiofhois dhfhioshfiohifo baufoihaf',
+  };
+  artists.push(newArtist);
+  return artists;
+}   
+
 
   
 
@@ -306,11 +317,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(artists){
+  let productiveArtists = [];
+  for (let i=0; i<artists.length; i++) {
+      if (artists[i].paintings > 100) {
+          productiveArtists.push(artists[i].name);
+      }
+  }
+  return productiveArtists;
 }
 
-
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
